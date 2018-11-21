@@ -3,15 +3,22 @@ package extraordenador;
 
 public class Rato {
     private String modelo;
+    private int tener;
     
-    public boolean inalambrico;
+    public boolean serInalambrico(){
+      boolean inalambrico;
+         if (tener == 1) {
+             inalambrico= true;
+         } else {
+             inalambrico= false;
+    } return inalambrico;
+    }
 
     public Rato() {
     }
 
-    public Rato(String modelo, boolean inalambrico) {
+    public Rato(String modelo) {
         this.modelo = modelo;
-        this.inalambrico = inalambrico;
     }
     
     public String getModelo() {
@@ -22,17 +29,9 @@ public class Rato {
         this.modelo = modelo;
     }
 
-    public boolean isInalambrico() {
-        return inalambrico;
-    }
-
-    public void setInalambrico(boolean inalambrico) {
-        this.inalambrico = inalambrico;
-    }
-
     @Override
     public String toString() {
-        return "Rato{" + "modelo=" + modelo + ", inalambrico=" + inalambrico + '}';
+        return "Rato{" + "modelo=" + modelo +'}';
     }
     }
 
